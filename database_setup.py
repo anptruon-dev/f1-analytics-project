@@ -13,7 +13,7 @@ def create_database():
         os.makedirs('data')
 
     # connect to SQLite database
-    conn = sqlite3.connext('data/f1_database.db')
+    conn = sqlite3.connect('data/f1_database.db')
     cursor = conn.cursor()
 
     # reading and executing schema
