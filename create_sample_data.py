@@ -13,7 +13,7 @@ def create_sample_data():
     conn = sqlite3.connect('data/f1_database.db')
     cursor = conn.cursor()
     
-    print("🏗️ Creating sample F1 data...")
+    print("Creating sample F1 data...")
     
     # Sample circuits - using individual INSERT statements to avoid datatype issues
     circuits_data = [
@@ -93,7 +93,7 @@ def create_sample_data():
     )
     
     # Create sample race results
-    print("🏎️ Generating race results...")
+    print("Generating race results...")
     
     # Driver-constructor pairings (realistic for 2024) - using IDs instead of strings
     driver_teams = {
@@ -155,8 +155,8 @@ def create_sample_data():
     conn.commit()
     conn.close()
     
-    print("✅ Sample data created successfully!")
-    print("📊 Data includes:")
+    print("Sample data created successfully!")
+    print("Data includes:")
     print("   - 10 circuits (Bahrain, Jeddah, Melbourne, etc.)")
     print("   - 10 drivers (Verstappen, Leclerc, Hamilton, etc.)")
     print("   - 10 constructors (Red Bull, Ferrari, Mercedes, etc.)")
@@ -173,7 +173,7 @@ def create_sample_data():
     cursor.execute("SELECT name, COUNT(*) as races FROM races JOIN race_results ON races.race_id = race_results.race_id GROUP BY name")
     race_stats = cursor.fetchall()
     
-    print(f"\n📈 Database Statistics:")
+    print(f"\nDatabase Statistics:")
     print(f"   - Total race results: {result_count}")
     print(f"   - Races with data: {len(race_stats)}")
     

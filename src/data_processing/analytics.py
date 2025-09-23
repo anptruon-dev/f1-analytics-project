@@ -323,7 +323,7 @@ def main():
     circuit_perf = analytics.get_circuit_performance()
     print(circuit_perf.head())
     
-    print("\n✅ Analytics complete! Ready for dashboard creation.")
+    print("\nAnalytics complete! Ready for dashboard creation.")
 
 if __name__ == "__main__":
     main()
